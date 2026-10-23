@@ -2285,6 +2285,13 @@ code{font-size:10.5px;background:var(--primary-pale);padding:2px 6px;border-radi
 #cv-edit-bar button{font-family:"Cairo",sans-serif;font-size:12px;font-weight:700;border:1.5px solid var(--border-light);background:var(--card-bg);color:var(--text);border-radius:8px;padding:5px 10px;cursor:pointer;min-width:34px}
 #cv-edit-bar button:hover{border-color:var(--primary-light);background:var(--primary-pale)}
 #cv-edit-bar button.ceb-on{background:var(--primary);color:#fff;border-color:var(--primary)}
+#cv-edit-bar .ceb-row2{margin-top:7px;padding-top:7px;border-top:1px dashed var(--border)}
+#cv-edit-bar select,#cv-edit-bar input[type=number]{font-family:"Cairo",sans-serif;font-size:12px;font-weight:700;border:1.5px solid var(--border-light);background:var(--input-bg);color:var(--text);border-radius:8px;padding:5px 8px;height:30px}
+#cv-edit-bar input[type=number]{width:58px;text-align:center;padding:5px 2px}
+#cv-edit-bar .ceb-size{display:inline-flex;align-items:center;gap:3px}
+#cv-edit-bar .ceb-color{display:inline-flex;align-items:center;gap:4px;border:1.5px solid var(--border-light);background:var(--card-bg);color:var(--text);border-radius:8px;padding:2px 7px;height:30px;cursor:pointer;font-size:13px}
+#cv-edit-bar .ceb-color input{width:24px;height:22px;border:none;padding:0;background:none;cursor:pointer}
+#cv-edit-bar button.ceb-act{background:var(--primary-pale);border-color:var(--primary-light)}
 #cv-edit-status{font-size:11px;text-align:center;margin-top:5px;color:var(--text-muted);min-height:1em}
 .cv-steps{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0 0 10px}
 .cv-steps button{font-family:"Cairo",sans-serif;font-size:11.5px;font-weight:700;border:1.5px solid var(--border-light);background:var(--primary-pale);color:var(--primary);border-radius:20px;padding:5px 12px;cursor:pointer}
@@ -2538,6 +2545,45 @@ code{font-size:10.5px;background:var(--primary-pale);padding:2px 6px;border-radi
         <button type="button" onmousedown="event.preventDefault()" onclick="cvRedo()">↪️</button>
         <button type="button" onmousedown="event.preventDefault()" onclick="cvEditReset()">🔄 رجّع الأصل</button>
       </div>
+      <div class="ceb-btns ceb-row2" id="cv-fmt-row">
+        <select id="cv-fe-font" title="الخط للكلام المحدد" onchange="cvSetFont(this.value)">
+          <option value="">🔤 الخط…</option>
+          <option value="Cairo, sans-serif">Cairo (عربي)</option>
+          <option value="Arial, Arimo, sans-serif">Arial</option>
+          <option value="Calibri, Carlito, sans-serif">Calibri</option>
+          <option value="Tahoma, sans-serif">Tahoma</option>
+          <option value="Verdana, sans-serif">Verdana</option>
+          <option value="'Times New Roman', Tinos, serif">Times New Roman</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="Garamond, 'EB Garamond', serif">Garamond</option>
+          <option value="Cambria, Caladea, serif">Cambria</option>
+          <option value="'Courier New', monospace">Courier New</option>
+        </select>
+        <span class="ceb-size"><button type="button" title="صغّر" onmousedown="event.preventDefault()" onclick="cvSizeStep(-0.5)">−</button><input type="number" id="cv-fe-size" min="6" max="48" step="0.5" title="حجم الخط (px) للكلام المحدد" placeholder="حجم" onchange="cvSetSize(this.value)"><button type="button" title="كبّر" onmousedown="event.preventDefault()" onclick="cvSizeStep(0.5)">+</button></span>
+        <span class="ceb-sep"></span>
+        <button type="button" id="cv-fe-b" title="بولد (Ctrl+B)" onmousedown="event.preventDefault()" onclick="cvFmt('bold')"><b>B</b></button>
+        <button type="button" id="cv-fe-i" title="مائل (Ctrl+I)" onmousedown="event.preventDefault()" onclick="cvFmt('italic')"><i>I</i></button>
+        <button type="button" id="cv-fe-u" title="تحته خط (Ctrl+U)" onmousedown="event.preventDefault()" onclick="cvFmt('underline')"><u>U</u></button>
+        <button type="button" id="cv-fe-s" title="يتشطب" onmousedown="event.preventDefault()" onclick="cvFmt('strikeThrough')"><s>S</s></button>
+        <span class="ceb-sep"></span>
+        <label class="ceb-color" title="لون الكلام"><span style="font-weight:900">A</span><input type="color" id="cv-fe-color" value="#000000" oninput="cvSetColor(this.value)"></label>
+        <label class="ceb-color" title="تظليل الكلام"><span>🖍</span><input type="color" id="cv-fe-hl" value="#fff59d" oninput="cvSetHilite(this.value)"></label>
+        <button type="button" title="شيل التظليل" onmousedown="event.preventDefault()" onclick="cvSetHilite('transparent')">⛔ التظليل</button>
+        <span class="ceb-sep"></span>
+        <button type="button" title="يمين" onmousedown="event.preventDefault()" onclick="cvTxtAlign('justifyRight')">⇥</button>
+        <button type="button" title="وسط" onmousedown="event.preventDefault()" onclick="cvTxtAlign('justifyCenter')">↔</button>
+        <button type="button" title="شمال" onmousedown="event.preventDefault()" onclick="cvTxtAlign('justifyLeft')">⇤</button>
+        <button type="button" title="ضبط الاتجاهين" onmousedown="event.preventDefault()" onclick="cvTxtAlign('justifyFull')">☰</button>
+        <span class="ceb-sep"></span>
+        <button type="button" title="شيل/رجّع الخط اللي تحت العنوان اللي واقف عليه" onmousedown="event.preventDefault()" onclick="cvToggleLine()">➖ الخط ده</button>
+        <button type="button" title="شيل/رجّع كل الخطوط الفاصلة في السيرة" onmousedown="event.preventDefault()" onclick="cvToggleAllLines()">🚫 كل الخطوط</button>
+        <button type="button" title="قائمة نقط" onmousedown="event.preventDefault()" onclick="cvBullets()">• قائمة</button>
+        <span class="ceb-sep"></span>
+        <button type="button" title="أضف سطر جديد بعد السطر الحالي" onmousedown="event.preventDefault()" onclick="cvAddLine()">➕ سطر جديد</button>
+        <button type="button" title="حرّك السطر لفوق" onmousedown="event.preventDefault()" onclick="cvMoveLine(-1)">⬆️</button>
+        <button type="button" title="حرّك السطر لتحت" onmousedown="event.preventDefault()" onclick="cvMoveLine(1)">⬇️</button>
+        <button type="button" title="شيل كل التنسيق من المحدد" onmousedown="event.preventDefault()" onclick="cvClearFmt()">🧽 شيل التنسيق</button>
+      </div>
       <div id="cv-edit-status"></div>
     </div>
     <div id="cv-preview-print">
@@ -2548,6 +2594,7 @@ code{font-size:10.5px;background:var(--primary-pale);padding:2px 6px;border-radi
       <div id="cv-tpl-box">
       <div class="cv-font-label" style="text-align:center">🧩 القالب — الحالي: <b id="cv-tpl-cur">كلاسيك ATS</b></div>
       <div class="cv-tpl-grp"><div class="cv-grp-h">✅ رسمي وكلاسيك<small>الأسلم للتقديم على مواقع الشركات (عمود واحد بدون صور)</small></div><div class="cv-tpl-row" id="cv-tpl-row" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch active" data-tpl="t11" onclick="cvSelectTemplate('t11',this)" style="width:auto;border-radius:9px;padding:6px 12px">كلاسيك ATS<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t17" onclick="cvSelectTemplate('t17',this)" style="width:auto;border-radius:9px;padding:6px 12px">Software Engineer<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t18" onclick="cvSelectTemplate('t18',this)" style="width:auto;border-radius:9px;padding:6px 12px">Student / Entry-Level<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t19" onclick="cvSelectTemplate('t19',this)" style="width:auto;border-radius:9px;padding:6px 12px">Experienced<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t20" onclick="cvSelectTemplate('t20',this)" style="width:auto;border-radius:9px;padding:6px 12px">Academic / Technical<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t14" onclick="cvSelectTemplate('t14',this)" style="width:auto;border-radius:9px;padding:6px 12px">تنفيذي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t13" onclick="cvSelectTemplate('t13',this)" style="width:auto;border-radius:9px;padding:6px 12px">مينيمال<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t15" onclick="cvSelectTemplate('t15',this)" style="width:auto;border-radius:9px;padding:6px 12px">مضغوط<small style="color:#15803d"> ✔</small></button></div></div>
+      <div class="cv-tpl-grp"><div class="cv-grp-h">🎨 عصري وملوّن<small>برضه عمود واحد ومناسب للـATS — بس بشكل أحلى</small></div><div class="cv-tpl-row" id="cv-tpl-row2" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch" data-tpl="t12" onclick="cvSelectTemplate('t12',this)" style="width:auto;border-radius:9px;padding:6px 12px">عصري<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t21" onclick="cvSelectTemplate('t21',this)" style="width:auto;border-radius:9px;padding:6px 12px">بلوك كحلي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t22" onclick="cvSelectTemplate('t22',this)" style="width:auto;border-radius:9px;padding:6px 12px">أنيق وسطي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t23" onclick="cvSelectTemplate('t23',this)" style="width:auto;border-radius:9px;padding:6px 12px">لمسة لون<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t24" onclick="cvSelectTemplate('t24',this)" style="width:auto;border-radius:9px;padding:6px 12px">خط زمني<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t25" onclick="cvSelectTemplate('t25',this)" style="width:auto;border-radius:9px;padding:6px 12px">عناوين مظللة<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t26" onclick="cvSelectTemplate('t26',this)" style="width:auto;border-radius:9px;padding:6px 12px">هيدر مقسوم<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t30" onclick="cvSelectTemplate('t30',this)" style="width:auto;border-radius:9px;padding:6px 12px">عريض عصري<small style="color:#15803d"> ✔</small></button></div></div>
       <div class="cv-tpl-grp"><div class="cv-grp-h">🎨 عصري وملوّن<small>برضه عمود واحد ومناسب للـATS — بس بشكل أحلى</small></div><div class="cv-tpl-row" id="cv-tpl-row2" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch" data-tpl="t12" onclick="cvSelectTemplate('t12',this)" style="width:auto;border-radius:9px;padding:6px 12px">عصري<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t21" onclick="cvSelectTemplate('t21',this)" style="width:auto;border-radius:9px;padding:6px 12px">بلوك كحلي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t22" onclick="cvSelectTemplate('t22',this)" style="width:auto;border-radius:9px;padding:6px 12px">أنيق وسطي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t23" onclick="cvSelectTemplate('t23',this)" style="width:auto;border-radius:9px;padding:6px 12px">لمسة لون<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t24" onclick="cvSelectTemplate('t24',this)" style="width:auto;border-radius:9px;padding:6px 12px">خط زمني<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t25" onclick="cvSelectTemplate('t25',this)" style="width:auto;border-radius:9px;padding:6px 12px">عناوين مظللة<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t26" onclick="cvSelectTemplate('t26',this)" style="width:auto;border-radius:9px;padding:6px 12px">هيدر مقسوم<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t30" onclick="cvSelectTemplate('t30',this)" style="width:auto;border-radius:9px;padding:6px 12px">عريض عصري<small style="color:#15803d"> ✔</small></button></div></div>
       <details class="cv-tpl-grp"><summary class="cv-grp-h" style="cursor:pointer">🗂️ قوالب قديمة (8) <small>دوس عشان تفتحها</small></summary><div class="cv-tpl-row" id="cv-tpl-row3" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch" data-tpl="t1" onclick="cvSelectTemplate('t1',this)" style="width:auto;border-radius:9px;padding:6px 12px">أزرق هادئ<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t4" onclick="cvSelectTemplate('t4',this)" style="width:auto;border-radius:9px;padding:6px 12px">داكن بسيط<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t5" onclick="cvSelectTemplate('t5',this)" style="width:auto;border-radius:9px;padding:6px 12px">وسطي بخطوط<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t6" onclick="cvSelectTemplate('t6',this)" style="width:auto;border-radius:9px;padding:6px 12px">شرائط زرقاء<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t7" onclick="cvSelectTemplate('t7',this)" style="width:auto;border-radius:9px;padding:6px 12px">مدمج<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t8" onclick="cvSelectTemplate('t8',this)" style="width:auto;border-radius:9px;padding:6px 12px">سيريف أنيق<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t3" onclick="cvSelectTemplate('t3',this)" style="width:auto;border-radius:9px;padding:6px 12px">روابط + مشاريع<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t10" onclick="cvSelectTemplate('t10',this)" style="width:auto;border-radius:9px;padding:6px 12px">روابط + شيبس<small style="color:#15803d"> ✔</small></button></div></details>
       <div class="cv-tpl-grp"><div class="cv-grp-h">⚠ عمودين (شريط جانبي / بانر)<small>شكلها أحلى للتقديم المباشر أو الإيميل، مش الأفضل للـATS</small></div><div class="cv-tpl-row" id="cv-tpl-row4" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch" data-tpl="t16" onclick="cvSelectTemplate('t16',this)" style="width:auto;border-radius:9px;padding:6px 12px">شريط جانبي<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t2" onclick="cvSelectTemplate('t2',this)" style="width:auto;border-radius:9px;padding:6px 12px">عمودين فاتح<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t9" onclick="cvSelectTemplate('t9',this)" style="width:auto;border-radius:9px;padding:6px 12px">عمودين كحلي<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t27" onclick="cvSelectTemplate('t27',this)" style="width:auto;border-radius:9px;padding:6px 12px">شريط جانبي فاتح<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t28" onclick="cvSelectTemplate('t28',this)" style="width:auto;border-radius:9px;padding:6px 12px">شريط جانبي داكن<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t29" onclick="cvSelectTemplate('t29',this)" style="width:auto;border-radius:9px;padding:6px 12px">بانر + عمودين<small style="color:#b45309"> ⚠</small></button></div></div>
@@ -5578,8 +5625,8 @@ function showLaptopTrack(id, btn) {
   <div class="card-title"><span class="ci">📘</span> صفحات فيسبوك مهمة للتعليم</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
     <a href="https://www.facebook.com/share/1G4eQYxc2g/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🌐</span><span class="ql-text">عبدالرحمن محمد — Web</span></a>
-      <a href="https://www.facebook.com/share/1PDzYi8MjT/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🌐</span><span class="ql-text">الزيرو — Web</span></a>
-    <a href="https://www.facebook.com/share/1ErJzSxY9n/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🔐</span><span class="ql-text">محمد السيد — backend</span></a>
+    <a href="https://www.facebook.com/share/1BbZuXEZas" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🌐</span><span class="ql-text">الزيرو — Web</span></a>
+    <a href="https://www.facebook.com/share/1PDzYi8MjT/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🔐</span><span class="ql-text">محمد فتحي — Cyber</span></a>
     <a href="https://www.facebook.com/share/1CWQN1NDbS/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🔐</span><span class="ql-text">إبراهيم حجازي — Cyber</span></a>
     <a href="https://www.facebook.com/groups/programmingadvices/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🦆</span><span class="ql-text">أبو هدهود — جروب</span></a>
     <a href="https://www.facebook.com/share/1JU532aujj/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🎓</span><span class="ql-text">Instant Academy</span></a>
@@ -10945,8 +10992,8 @@ let cvColor='#000000';
 let cvColorSet=false,cvAlign='auto',cvSpace='auto',cvDiv='auto';
 let cvSizeDelta=0;
 const CV_FONT_STACKS={arial:"Arial,'Arimo',Helvetica,sans-serif",times:"'Times New Roman','Tinos',Times,serif",calibri:"Calibri,'Carlito',Candara,Arial,sans-serif",georgia:"Georgia,'Times New Roman',serif",garamond:"Garamond,'EB Garamond',Georgia,serif",cambria:"Cambria,'Caladea',Georgia,serif",cairo:"'Cairo',Tahoma,Arial,sans-serif"};
-const CV_BASE_FS={t11:11.5,t12:11.5,t13:11.5,t14:11.5,t15:10.5,t16:11,t17:11,t18:11.5,t19:11.5,t20:12,t21:11.5,t22:11.5,t23:11.5,t24:11.5,t25:11.5,t26:11.5,t27:11,t28:11,t29:11,t30:11.5};
-const CV_TEMPLATES={t11:'كلاسيك ATS',t12:'عصري',t13:'مينيمال',t14:'تنفيذي',t15:'مضغوط',t16:'شريط جانبي',t17:'Software Engineer',t18:'Student / Entry-Level',t19:'Experienced',t20:'Academic / Technical',t1:'أزرق هادئ',t2:'عمودين فاتح',t3:'روابط + مشاريع',t4:'داكن بسيط',t5:'وسطي بخطوط',t6:'شرائط زرقاء',t7:'مدمج',t8:'سيريف أنيق',t9:'عمودين كحلي',t10:'روابط + شيبس',t21:'بلوك كحلي',t22:'أنيق وسطي',t23:'لمسة لون',t24:'خط زمني',t25:'عناوين مظللة',t26:'هيدر مقسوم',t30:'عريض عصري',t27:'شريط جانبي فاتح',t28:'شريط جانبي داكن',t29:'بانر + عمودين'};
+const CV_BASE_FS={t11:11.5,t12:11.5,t13:11.5,t14:11.5,t15:10.5,t16:11,t17:11,t18:11.5,t19:11.5,t20:12,t21:11.5,t22:11.5,t23:11.5,t24:11.5,t25:11.5,t26:11.5,t27:11,t28:11,t29:11,t30:11.5,t31:11.5,t32:11.5,t33:11.5,t34:11.5,t35:10.5,t36:11.5};
+const CV_TEMPLATES={t11:'كلاسيك ATS',t12:'عصري',t13:'مينيمال',t14:'تنفيذي',t15:'مضغوط',t16:'شريط جانبي',t17:'Software Engineer',t18:'Student / Entry-Level',t19:'Experienced',t20:'Academic / Technical',t1:'أزرق هادئ',t2:'عمودين فاتح',t3:'روابط + مشاريع',t4:'داكن بسيط',t5:'وسطي بخطوط',t6:'شرائط زرقاء',t7:'مدمج',t8:'سيريف أنيق',t9:'عمودين كحلي',t10:'روابط + شيبس',t21:'بلوك كحلي',t22:'أنيق وسطي',t23:'لمسة لون',t24:'خط زمني',t25:'عناوين مظللة',t26:'هيدر مقسوم',t30:'عريض عصري',t27:'شريط جانبي فاتح',t28:'شريط جانبي داكن',t29:'بانر + عمودين',t31:'Modern Teal',t32:'Minimal Serif',t33:'Bold Header',t34:'Soft Slate',t35:'Compact Executive',t36:'Timeline Lite'};
 let cvLastData=null;
 let cvPhotoDataUrl='';
 
@@ -12108,7 +12155,7 @@ function cvBuildHTML(d,tpl){
   const html=cvApplyStyle(cvBuildHTMLRaw(d,tpl),tpl);
   if(cvManual){
     if(cvManual.base===html){cvLastBase=html;return cvManual.edited;}   // nothing else changed: keep the user's hand edits
-    cvManual=null;cvEditNotice(true);                                     // template/style/data changed: rebuild from scratch
+    const _re=/<div\b[^>]*class="cv-page[^"]*"[^>]*>/,_a=cvManual.base.match(_re),_b=html.match(_re),_c=cvManual.edited.match(_re);if(_a&&_b&&_c&&cvManual.base.replace(_re,'')===html.replace(_re,'')){const ed=cvManual.edited.replace(_re,()=>_b[0]);cvManual={base:html,edited:ed};cvLastBase=html;return ed;}cvManual=null;cvEditNotice(true);                                     // template/style/data changed: rebuild from scratch
   }
   cvLastBase=html;return html;
 }
@@ -14956,5 +15003,185 @@ body{overflow-wrap:break-word}
 </script>
 
 <div id="pdf-print-area"></div>
+<style>
+/* ===== New Canva-style, ATS-safe single-column templates (t31-t36): real text only, no tables/columns/images ===== */
+.cv-page.cv-classic[class*="cv-tpl-t3"]{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cv-page[dir="rtl"].cv-classic:is(.cv-tpl-t31,.cv-tpl-t32,.cv-tpl-t33,.cv-tpl-t34,.cv-tpl-t35,.cv-tpl-t36) *{letter-spacing:0!important;text-transform:none!important}
+/* t31 Modern Teal: left-aligned, accent bar beside each heading */
+.cv-page.cv-classic.cv-tpl-t31{--cv-fs:11.5px;font-family:Calibri,'Carlito','Segoe UI',Arial,sans-serif;line-height:1.45}
+.cv-page.cv-classic.cv-tpl-t31 .cv-c-head{text-align:start;border-bottom:none;padding:0 0 8px;margin-bottom:2px}
+.cv-page.cv-classic.cv-tpl-t31 .cv-c-name{color:#111827;font-size:2.4em;text-transform:none;letter-spacing:0;font-weight:800}
+.cv-page.cv-classic.cv-tpl-t31 .cv-c-title{color:var(--cv-accent,#0f766e);text-transform:none;font-weight:700;font-size:1.12em}
+.cv-page.cv-classic.cv-tpl-t31 .cv-c-contact{text-align:start;direction:inherit;color:#374151;margin-top:5px}
+.cv-page.cv-classic.cv-tpl-t31 .cv-c-h{color:var(--cv-accent,#0f766e);border-bottom:1px solid #d1d5db;border-inline-start:5px solid var(--cv-accent,#0f766e);padding:2px 8px;letter-spacing:.08em;font-size:1.05em;margin-bottom:6px}
+/* t32 Minimal Serif: centred, hairlines, small-caps headings */
+.cv-page.cv-classic.cv-tpl-t32{--cv-fs:11.5px;line-height:1.5}
+.cv-page.cv-classic.cv-tpl-t32:not([dir="rtl"]){font-family:Garamond,'EB Garamond',Georgia,serif}
+.cv-page.cv-classic.cv-tpl-t32 .cv-c-head{text-align:center;border-bottom:1px solid #9ca3af;padding-bottom:8px;margin-bottom:4px}
+.cv-page.cv-classic.cv-tpl-t32 .cv-c-name{font-size:2.2em;font-weight:600;letter-spacing:.18em;color:var(--cv-accent,#111827)}
+.cv-page.cv-classic.cv-tpl-t32 .cv-c-title{text-transform:none;font-style:italic;font-weight:400;color:#4b5563}
+.cv-page.cv-classic.cv-tpl-t32 .cv-c-h{border-bottom:none;font-variant:small-caps;text-transform:none;letter-spacing:.14em;font-weight:700;font-size:1.2em;color:var(--cv-accent,#111827);text-align:center;margin-bottom:4px}
+/* t33 Bold Header: heavy accent rule, shaded headings */
+.cv-page.cv-classic.cv-tpl-t33{--cv-fs:11.5px;font-family:Arial,'Arimo',Helvetica,sans-serif;line-height:1.42}
+.cv-page.cv-classic.cv-tpl-t33 .cv-c-head{text-align:start;border-bottom:4px solid var(--cv-accent,#1d4ed8);padding-bottom:8px;margin-bottom:4px}
+.cv-page.cv-classic.cv-tpl-t33 .cv-c-name{font-size:2.5em;font-weight:900;color:#0f172a;text-transform:none;letter-spacing:-.01em}
+.cv-page.cv-classic.cv-tpl-t33 .cv-c-title{color:var(--cv-accent,#1d4ed8);text-transform:none;font-weight:700}
+.cv-page.cv-classic.cv-tpl-t33 .cv-c-contact{text-align:start;direction:inherit}
+.cv-page.cv-classic.cv-tpl-t33 .cv-c-h{background:#eef2f7;color:var(--cv-accent,#1d4ed8);border-bottom:none;border-inline-start:4px solid var(--cv-accent,#1d4ed8);padding:3px 9px;font-size:1.02em;letter-spacing:.07em;margin-bottom:6px}
+/* t34 Soft Slate: dotted rules, calm two-tone */
+.cv-page.cv-classic.cv-tpl-t34{--cv-fs:11.5px;font-family:'Segoe UI',Tahoma,Arial,sans-serif;line-height:1.5}
+.cv-page.cv-classic.cv-tpl-t34 .cv-c-head{text-align:center;border-bottom:2px dotted var(--cv-accent,#475569);padding-bottom:9px}
+.cv-page.cv-classic.cv-tpl-t34 .cv-c-name{font-size:2.15em;font-weight:700;color:#1e293b;text-transform:none;letter-spacing:.02em}
+.cv-page.cv-classic.cv-tpl-t34 .cv-c-title{color:var(--cv-accent,#475569);text-transform:none;font-weight:600;letter-spacing:.12em}
+.cv-page.cv-classic.cv-tpl-t34 .cv-c-h{color:var(--cv-accent,#475569);border-bottom:1.5px dotted var(--cv-accent,#475569);letter-spacing:.12em;font-size:1em}
+/* t35 Compact Executive: dense one-pager, top rule on headings */
+.cv-page.cv-classic.cv-tpl-t35{--cv-fs:10.5px;font-family:Arial,'Arimo',Helvetica,sans-serif;line-height:1.32;padding:11mm 13mm}
+.cv-page.cv-classic.cv-tpl-t35 .cv-c-head{text-align:start;border-bottom:none;padding-bottom:2px;margin-bottom:0}
+.cv-page.cv-classic.cv-tpl-t35 .cv-c-name{font-size:2em;font-weight:800;color:var(--cv-accent,#14284b);text-transform:none;letter-spacing:.01em}
+.cv-page.cv-classic.cv-tpl-t35 .cv-c-title{text-transform:none;font-weight:600;color:#374151}
+.cv-page.cv-classic.cv-tpl-t35 .cv-c-contact{text-align:start;direction:inherit}
+.cv-page.cv-classic.cv-tpl-t35 .cv-c-sec{margin-top:.75em}
+.cv-page.cv-classic.cv-tpl-t35 .cv-c-h{border-bottom:none;border-top:2px solid var(--cv-accent,#14284b);padding:3px 0 0;color:var(--cv-accent,#14284b);font-size:1em;letter-spacing:.1em;margin-bottom:3px}
+.cv-page.cv-classic.cv-tpl-t35 .cv-c-item{margin-bottom:.45em}
+/* t36 Timeline Lite: accent line down the left of each entry */
+.cv-page.cv-classic.cv-tpl-t36{--cv-fs:11.5px;font-family:Calibri,'Carlito',Arial,sans-serif;line-height:1.45}
+.cv-page.cv-classic.cv-tpl-t36 .cv-c-head{text-align:start;border-bottom:none;padding-bottom:6px}
+.cv-page.cv-classic.cv-tpl-t36 .cv-c-name{font-size:2.3em;font-weight:800;color:var(--cv-accent,#7c2d12);text-transform:none;letter-spacing:0}
+.cv-page.cv-classic.cv-tpl-t36 .cv-c-title{color:#44403c;text-transform:none;font-weight:600}
+.cv-page.cv-classic.cv-tpl-t36 .cv-c-contact{text-align:start;direction:inherit}
+.cv-page.cv-classic.cv-tpl-t36 .cv-c-h{border-bottom:none;color:var(--cv-accent,#7c2d12);font-size:1.12em;letter-spacing:.08em;margin-bottom:5px}
+.cv-page.cv-classic.cv-tpl-t36 .cv-c-h::before{content:"";display:inline-block;width:.7em;height:.7em;border-radius:50%;background:var(--cv-accent,#7c2d12);margin-inline-end:.5em}
+.cv-page.cv-classic.cv-tpl-t36 .cv-c-item{border-inline-start:2px solid var(--cv-accent,#7c2d12);padding-inline-start:.9em;margin-inline-start:.28em}
+</style>
+<script>
+/* ===== CV: Canva-like text editing (font, size, colour, italic, underline, align, add/move line) ===== */
+(function(){
+  var saved=null;
+  function inPrev(r){var p=cvPrev();return p&&r&&p.contains(r.commonAncestorContainer);}
+  document.addEventListener('selectionchange',function(){
+    var s=window.getSelection();if(!s||!s.rangeCount)return;var r=s.getRangeAt(0);
+    if(inPrev(r)){saved=r.cloneRange();cvSyncFmtUI();}
+  });
+  window.cvSyncFmtUI=function(){
+    try{
+      var s=window.getSelection();if(!s||!s.rangeCount||!inPrev(s.getRangeAt(0)))return;
+      var n=s.anchorNode;n=n&&n.nodeType===1?n:n&&n.parentElement;
+      var sz=document.getElementById('cv-fe-size');
+      if(n&&sz&&document.activeElement!==sz){sz.value=(Math.round(parseFloat(getComputedStyle(n).fontSize)*2)/2)||'';}
+      [['cv-fe-b','bold'],['cv-fe-i','italic'],['cv-fe-u','underline'],['cv-fe-s','strikeThrough']].forEach(function(a){
+        var b=document.getElementById(a[0]);if(b)b.classList.toggle('ceb-act',!!document.queryCommandState(a[1]));});
+    }catch(e){}
+  };
+  function restore(){
+    var p=cvPrev();if(!p)return false;
+    if(p.getAttribute('contenteditable')!=='true'){cvEditHint('التعديل مقفول — دوس "التعديل: شغّال" الأول.');return false;}
+    var s=window.getSelection();
+    if(!(s.rangeCount&&inPrev(s.getRangeAt(0)))){
+      if(!saved){cvEditHint('حدّد الكلمة أو الجملة جوّا السيرة الأول.');return false;}
+      p.focus({preventScroll:true});s.removeAllRanges();s.addRange(saved);
+    }
+    return true;
+  }
+  function needSel(){
+    if(!restore())return false;
+    var s=window.getSelection();
+    if(!s.rangeCount||s.isCollapsed){cvEditHint('حدّد الكلمة أو الجملة الأول (بالماوس أو بإصبعك).');return false;}
+    return true;
+  }
+  window.cvFmt=function(cmd){
+    if(!needSel())return;
+    document.execCommand('styleWithCSS',false,false);document.execCommand(cmd);
+    var s=window.getSelection();if(s.rangeCount)saved=s.getRangeAt(0).cloneRange();
+    cvEditSync();cvSyncFmtUI();
+  };
+  window.cvSetFont=function(f){
+    if(!f||!needSel())return;
+    document.execCommand('styleWithCSS',false,true);document.execCommand('fontName',false,f);
+    cvEditSync();
+  };
+  window.cvSetSize=function(v){
+    v=parseFloat(v);if(!(v>=6&&v<=48)){cvEditHint('الحجم لازم يكون بين 6 و 48.');return;}
+    if(!needSel())return;
+    document.execCommand('styleWithCSS',false,false);document.execCommand('fontSize',false,'7');
+    var made=[];
+    cvPrev().querySelectorAll('font[size="7"]').forEach(function(f){
+      var sp=document.createElement('span');sp.style.fontSize=v+'px';
+      while(f.firstChild)sp.appendChild(f.firstChild);
+      sp.querySelectorAll('[style*="font-size"]').forEach(function(x){x.style.removeProperty('font-size');});
+      f.replaceWith(sp);
+      made.push(sp);
+    });
+    if(made.length){var r=document.createRange();r.setStartBefore(made[0]);r.setEndAfter(made[made.length-1]);var sl=window.getSelection();sl.removeAllRanges();sl.addRange(r);saved=r.cloneRange();}
+    cvEditSync();
+  };
+  window.cvSizeStep=function(d){
+    var sz=document.getElementById('cv-fe-size');var cur=parseFloat(sz&&sz.value);
+    if(!cur){var s=window.getSelection();var n=s&&s.anchorNode;n=n&&n.nodeType===1?n:n&&n.parentElement;cur=n?parseFloat(getComputedStyle(n).fontSize):11;}
+    var nv=Math.max(6,Math.min(48,(cur||11)+d));if(sz)sz.value=nv;cvSetSize(nv);
+  };
+  window.cvSetColor=function(c){if(!needSel())return;document.execCommand('styleWithCSS',false,true);document.execCommand('foreColor',false,c);cvEditSync();};
+  window.cvSetHilite=function(c){if(!needSel())return;document.execCommand('styleWithCSS',false,true);document.execCommand('hiliteColor',false,c);cvEditSync();};
+  window.cvTxtAlign=function(cmd){if(!restore())return;document.execCommand('styleWithCSS',false,true);document.execCommand(cmd);cvEditSync();};
+  window.cvBullets=function(){if(!restore())return;document.execCommand('insertUnorderedList');cvEditSync();};
+  window.cvClearFmt=function(){if(!needSel())return;document.execCommand('removeFormat');cvEditSync();};
+  var LINE='li,.cv-c-text,.cv-c-sub,.cv-summary-text,.cv-c-row,.cv-edu-row,.cv-proj-title-row,p';
+  function curLine(){
+    var s=window.getSelection();var n=s&&s.rangeCount&&inPrev(s.getRangeAt(0))?s.anchorNode:(saved?saved.commonAncestorContainer:null);
+    n=n&&n.nodeType===1?n:n&&n.parentElement;var el=n&&n.closest(LINE);
+    return el&&cvPrev().contains(el)&&!el.classList.contains('cv-page')?el:null;
+  }
+  window.cvAddLine=function(){
+    if(!restore())return;var el=curLine();
+    if(!el){cvEditHint('دوس جوّا السطر اللي عايز تضيف بعده سطر جديد.');return;}
+    var nu=el.cloneNode(false);nu.textContent='نص جديد';
+    el.parentNode.insertBefore(nu,el.nextSibling);
+    var r=document.createRange();r.selectNodeContents(nu);var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+    cvEditSync();
+  };
+  window.cvMoveLine=function(d){
+    if(!restore())return;var el=curLine();
+    if(!el){cvEditHint('دوس جوّا السطر اللي عايز تحرّكه الأول.');return;}
+    var sib=d<0?el.previousElementSibling:el.nextElementSibling;
+    if(!sib){cvEditHint('السطر ده في '+(d<0?'أول':'آخر')+' القسم.');return;}
+    if(d<0)el.parentNode.insertBefore(el,sib);else el.parentNode.insertBefore(sib,el);
+    cvEditSync();
+  };
+})();
+</script>
+<script>
+/* ===== CV fixes: font box stays in sync + remove divider lines without losing hand edits ===== */
+(function(){
+  var _old=window.cvSyncFmtUI;
+  function fam(v){return String(v||'').split(',')[0].replace(/["']/g,'').trim().toLowerCase();}
+  window.cvSyncFmtUI=function(){
+    try{_old&&_old();}catch(e){}
+    try{
+      var sel=document.getElementById('cv-fe-font'),s=window.getSelection();
+      if(!sel||document.activeElement===sel||!s||!s.rangeCount)return;
+      var n=s.anchorNode;n=n&&n.nodeType===1?n:n&&n.parentElement;if(!n||!cvPrev().contains(n))return;
+      var f=fam(getComputedStyle(n).fontFamily),idx=0;
+      for(var i=1;i<sel.options.length;i++){if(fam(sel.options[i].value)===f){idx=i;break;}}
+      sel.selectedIndex=idx;
+    }catch(e){}
+  };
+  window.cvToggleLine=function(){
+    var s=window.getSelection(),p=cvPrev();
+    if(!s||!s.rangeCount||!p.contains(s.anchorNode)){cvEditHint('دوس جوّا السيرة عند العنوان أو القسم اللي عايز تشيل الخط بتاعه.');return;}
+    var n=s.anchorNode;n=n.nodeType===1?n:n.parentElement;
+    var H='.cv-c-h,.cv-section-title,.cv-c-head,.cv-header,.cv-t2-banner';
+    var el=n.closest('hr')||n.closest(H);
+    if(!el||el.classList.contains('cv-page')){var sec=n.closest('.cv-c-sec,.cv-section');el=sec&&sec.querySelector('.cv-c-h,.cv-section-title');}
+    if(!el||!p.contains(el)){cvEditHint('مقدرتش ألاقي خط هنا — دوس على عنوان القسم.');return;}
+    if(el.tagName==='HR'){el.remove();cvEditSync();return;}
+    if(el.dataset.noLine){delete el.dataset.noLine;['border-bottom','border-top'].forEach(function(k){el.style.removeProperty(k);});if(!el.getAttribute('style'))el.removeAttribute('style');}
+    else{el.dataset.noLine='1';el.style.setProperty('border-bottom','none','important');el.style.setProperty('border-top','none','important');}
+    cvEditSync();
+  };
+  window.cvToggleAllLines=function(){
+    cvSetOpt('Div',cvDiv==='off'?'auto':'off');
+    try{cvSyncCtlUI();}catch(e){}
+  };
+})();
+</script>
 </body>
 </html>
