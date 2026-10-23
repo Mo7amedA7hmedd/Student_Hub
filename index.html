@@ -2164,6 +2164,139 @@ code{font-size:10.5px;background:var(--primary-pale);padding:2px 6px;border-radi
 @media(max-width:640px){.cv-page.cv-classic.cv-tpl-t16{grid-template-columns:1fr;min-height:0}}
 @media print{.cv-page.cv-classic{box-shadow:none}}
 
+/* ===== New professional templates t21-t30 (added; existing templates untouched) ===== */
+.cv-page[dir="rtl"].cv-classic:is(.cv-tpl-t21,.cv-tpl-t22,.cv-tpl-t23,.cv-tpl-t24,.cv-tpl-t25,.cv-tpl-t26,.cv-tpl-t27,.cv-tpl-t28,.cv-tpl-t29,.cv-tpl-t30) *{letter-spacing:0!important;text-transform:none!important}
+/* t21 — Corporate Navy: colored header block, ruled headings */
+.cv-page.cv-classic.cv-tpl-t21{--cv-fs:11.5px;font-family:Calibri,'Carlito','Segoe UI',Arial,sans-serif;line-height:1.42}
+.cv-page.cv-classic.cv-tpl-t21 .cv-c-head{text-align:start;background:var(--cv-accent,#12355b);color:#fff;border-bottom:none;padding:14px 18px 12px;margin-bottom:6px;border-radius:3px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cv-page.cv-classic.cv-tpl-t21 .cv-c-name{color:#fff;font-size:2.25em;text-transform:none;letter-spacing:.01em}
+.cv-page.cv-classic.cv-tpl-t21 .cv-c-title{color:#dbe7f5;text-transform:none;font-weight:600;letter-spacing:.04em}
+.cv-page.cv-classic.cv-tpl-t21 .cv-c-contact{color:#e8eef7;text-align:start;direction:inherit;margin-top:6px;font-size:.93em}
+.cv-page.cv-classic.cv-tpl-t21 .cv-c-contact svg{fill:#fff!important}
+.cv-page.cv-classic.cv-tpl-t21 .cv-c-sec{margin-top:1.1em}
+.cv-page.cv-classic.cv-tpl-t21 .cv-c-h{color:var(--cv-accent,#12355b);border-bottom:2px solid var(--cv-accent,#12355b);letter-spacing:.09em;font-size:1.05em}
+/* t22 — Elegant Centered: double rules, serif, centered headings flanked by lines */
+.cv-page.cv-classic.cv-tpl-t22{--cv-fs:11.5px;line-height:1.45}
+.cv-page.cv-classic.cv-tpl-t22:not([dir="rtl"]){font-family:Georgia,'Times New Roman',serif}
+.cv-page.cv-classic.cv-tpl-t22 .cv-c-head{text-align:center;border-top:3px double var(--cv-accent,#1f2937);border-bottom:3px double var(--cv-accent,#1f2937);padding:12px 0 10px;margin-bottom:4px}
+.cv-page.cv-classic.cv-tpl-t22 .cv-c-name{font-size:2.3em;font-weight:700;letter-spacing:.14em;color:var(--cv-accent,#1f2937)}
+.cv-page.cv-classic.cv-tpl-t22 .cv-c-title{text-transform:none;font-style:italic;font-weight:400;letter-spacing:.03em;color:#4b5563}
+.cv-page.cv-classic.cv-tpl-t22 .cv-c-contact{text-align:center;color:#374151}
+.cv-page.cv-classic.cv-tpl-t22 .cv-c-sec{margin-top:1em}
+.cv-page.cv-classic.cv-tpl-t22 .cv-c-h{display:flex;align-items:center;gap:10px;border-bottom:none;font-size:.95em;letter-spacing:.22em;color:var(--cv-accent,#1f2937);justify-content:center}
+.cv-page.cv-classic.cv-tpl-t22 .cv-c-h::before,.cv-page.cv-classic.cv-tpl-t22 .cv-c-h::after{content:"";flex:1;height:1px;background:#9ca3af}
+/* t23 — Modern Accent: bold name, short accent bar under headings */
+.cv-page.cv-classic.cv-tpl-t23{--cv-fs:11.5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.45}
+.cv-page.cv-classic.cv-tpl-t23 .cv-c-head{text-align:start;border-bottom:none;padding-bottom:4px;margin-bottom:4px}
+.cv-page.cv-classic.cv-tpl-t23 .cv-c-name{font-size:2.5em;font-weight:800;text-transform:none;letter-spacing:-.01em;color:#111827}
+.cv-page.cv-classic.cv-tpl-t23 .cv-c-title{text-transform:none;font-weight:600;color:var(--cv-accent,#0f766e);font-size:1.15em;letter-spacing:.01em}
+.cv-page.cv-classic.cv-tpl-t23 .cv-c-contact{text-align:start;direction:inherit;color:#4b5563;margin-top:6px}
+.cv-page.cv-classic.cv-tpl-t23 .cv-c-sec{margin-top:1.1em}
+.cv-page.cv-classic.cv-tpl-t23 .cv-c-h{border-bottom:none;color:#111827;font-size:1em;letter-spacing:.12em;margin-bottom:7px}
+.cv-page.cv-classic.cv-tpl-t23 .cv-c-h::after{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--cv-accent,#0f766e);margin-top:3px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* t24 — Timeline: vertical line + dots on experience / projects / education */
+.cv-page.cv-classic.cv-tpl-t24{--cv-fs:11.5px;font-family:Calibri,'Carlito','Segoe UI',Arial,sans-serif;line-height:1.42}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-head{text-align:start;border-bottom:2px solid var(--cv-accent,#1d4ed8);padding-bottom:8px}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-name{font-size:2.3em;text-transform:none;letter-spacing:0;color:#111827}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-title{text-transform:none;font-weight:600;color:var(--cv-accent,#1d4ed8)}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-contact{text-align:start;direction:inherit;color:#374151}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-sec{margin-top:1.1em}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-h{border-bottom:1px solid #e5e7eb;color:var(--cv-accent,#1d4ed8);letter-spacing:.1em;font-size:1.02em}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-h::before{content:"";display:inline-block;width:.62em;height:.62em;background:var(--cv-accent,#1d4ed8);margin-inline-end:.55em;border-radius:1px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-item{position:relative;padding-inline-start:15px;border-inline-start:2px solid #d1d5db;margin-bottom:.8em}
+.cv-page.cv-classic.cv-tpl-t24 .cv-c-item::before{content:"";position:absolute;inset-inline-start:-6px;top:.3em;width:10px;height:10px;box-sizing:border-box;border-radius:50%;background:var(--cv-accent,#1d4ed8);border:2px solid #fff;box-shadow:0 0 0 1px var(--cv-accent,#1d4ed8);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* t25 — Filled Headings: solid accent bars with white text */
+.cv-page.cv-classic.cv-tpl-t25{--cv-fs:11.5px;font-family:Arial,'Arimo',Helvetica,sans-serif;line-height:1.42}
+.cv-page.cv-classic.cv-tpl-t25 .cv-c-head{text-align:start;border-bottom:none;margin-bottom:4px}
+.cv-page.cv-classic.cv-tpl-t25 .cv-c-name{font-size:2.3em;text-transform:none;letter-spacing:0;color:#111827}
+.cv-page.cv-classic.cv-tpl-t25 .cv-c-title{text-transform:none;font-weight:700;color:var(--cv-accent,#334155)}
+.cv-page.cv-classic.cv-tpl-t25 .cv-c-contact{text-align:start;direction:inherit;color:#374151}
+.cv-page.cv-classic.cv-tpl-t25 .cv-c-sec{margin-top:1em}
+.cv-page.cv-classic.cv-tpl-t25 .cv-c-h{background:var(--cv-accent,#334155);color:#fff;border-bottom:none;padding:3px 10px;border-radius:2px;letter-spacing:.1em;font-size:.98em;margin-bottom:6px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* t26 — Split Header: name left, contact right, thick rule */
+.cv-page.cv-classic.cv-tpl-t26{--cv-fs:11.5px;font-family:Calibri,'Carlito','Segoe UI',Arial,sans-serif;line-height:1.42}
+.cv-page.cv-classic.cv-tpl-t26 .cv-c-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,46%);column-gap:18px;align-items:end;text-align:start;border-bottom:3px solid var(--cv-accent,#7c2d12);padding-bottom:9px;margin-bottom:6px}
+.cv-page.cv-classic.cv-tpl-t26 .cv-c-name{grid-column:1;grid-row:1;font-size:2.3em;text-transform:none;letter-spacing:0;color:#111827}
+.cv-page.cv-classic.cv-tpl-t26 .cv-c-title{grid-column:1;grid-row:2;text-transform:none;font-weight:600;color:var(--cv-accent,#7c2d12)}
+.cv-page.cv-classic.cv-tpl-t26 .cv-c-contact{grid-column:2;grid-row:1 / span 2;text-align:end;direction:inherit;font-size:.88em;line-height:1.55;color:#374151;margin-top:0}
+.cv-page.cv-classic.cv-tpl-t26 .cv-c-sec{margin-top:1.05em}
+.cv-page.cv-classic.cv-tpl-t26 .cv-c-h{color:var(--cv-accent,#7c2d12);border-bottom:1px solid #d1d5db;letter-spacing:.1em;font-size:1.02em}
+@media(max-width:640px){.cv-page.cv-classic.cv-tpl-t26 .cv-c-head{grid-template-columns:1fr}.cv-page.cv-classic.cv-tpl-t26 .cv-c-contact{grid-column:1;grid-row:auto;text-align:start;margin-top:5px}}
+/* t27 — Sidebar Light */
+.cv-page.cv-classic.cv-tpl-t27{--cv-fs:11px;padding:0;display:grid;grid-template-columns:32% minmax(0,1fr);min-height:270mm;overflow:hidden;font-family:Calibri,'Carlito','Segoe UI',Arial,sans-serif}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-side{background:#f1f5f9;color:#1f2937;padding:13mm 7mm;border-inline-end:3px solid var(--cv-accent,#0f4c75);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-side .cv-c-sec:first-child{margin-top:0}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-side .cv-c-h{color:var(--cv-accent,#0f4c75);font-size:.95em;border-bottom:1px solid #cbd5e1}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-side .cv-c-text,.cv-page.cv-classic.cv-tpl-t27 .cv-c-side .cv-c-row span:first-child{word-break:break-word}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-main{padding:13mm 9mm;min-width:0}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-main .cv-c-head{text-align:start;margin-top:0;border-bottom:none}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-main .cv-c-name{font-size:2em;text-transform:none;letter-spacing:0;color:var(--cv-accent,#0f4c75)}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-main .cv-c-title{text-transform:none;color:#475569}
+.cv-page.cv-classic.cv-tpl-t27 .cv-c-main .cv-c-h{color:var(--cv-accent,#0f4c75);border-bottom:2px solid var(--cv-accent,#0f4c75);font-size:1.02em}
+@media(max-width:640px){.cv-page.cv-classic.cv-tpl-t27{grid-template-columns:1fr;min-height:0}}
+/* t28 — Sidebar Dark (sidebar on the end side) */
+.cv-page.cv-classic.cv-tpl-t28{--cv-fs:11px;padding:0;display:grid;grid-template-columns:minmax(0,1fr) 31%;min-height:270mm;overflow:hidden;font-family:Calibri,'Carlito','Segoe UI',Arial,sans-serif}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-side{order:2;background:var(--cv-accent,#1e293b);color:#f1f5f9;padding:13mm 7mm;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-main{order:1;padding:13mm 9mm;min-width:0}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-side .cv-c-sec:first-child{margin-top:0}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-side .cv-c-h{color:#fff;font-size:.95em;border-bottom:1px solid rgba(255,255,255,.4)}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-side .cv-c-text,.cv-page.cv-classic.cv-tpl-t28 .cv-c-side .cv-c-row span:first-child{color:#e2e8f0;word-break:break-word}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-main .cv-c-head{text-align:start;margin-top:0;border-bottom:none}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-main .cv-c-name{font-size:2em;text-transform:none;letter-spacing:0;color:#0f172a}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-main .cv-c-title{text-transform:none;color:var(--cv-accent,#1e293b);font-weight:700}
+.cv-page.cv-classic.cv-tpl-t28 .cv-c-main .cv-c-h{color:var(--cv-accent,#1e293b);border-bottom:2px solid var(--cv-accent,#1e293b);font-size:1.02em}
+@media(max-width:640px){.cv-page.cv-classic.cv-tpl-t28{grid-template-columns:1fr;min-height:0}.cv-page.cv-classic.cv-tpl-t28 .cv-c-side{order:0}}
+/* t29 — Banner + Two Columns */
+.cv-page.cv-classic.cv-tpl-t29{--cv-fs:11px;padding:0;display:flex;flex-direction:column;min-height:270mm;overflow:hidden;font-family:Calibri,'Carlito','Segoe UI',Arial,sans-serif}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-head{text-align:start;background:var(--cv-accent,#0f3d63);color:#fff;border-bottom:none;margin:0;padding:12mm 14mm 8mm;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-name{color:#fff;font-size:2.3em;text-transform:none;letter-spacing:0}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-title{color:#cfe0f1;text-transform:none;font-weight:600}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-contact{color:#e6eef7;text-align:start;direction:inherit;margin-top:6px}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-contact svg{fill:#fff!important}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-cols{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 33%}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-main{padding:6mm 9mm 12mm;padding-inline-start:14mm;min-width:0}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-side{background:#f1f5f9;padding:6mm 7mm 12mm;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-main .cv-c-sec:first-child,.cv-page.cv-classic.cv-tpl-t29 .cv-c-side .cv-c-sec:first-child{margin-top:0}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-h{color:var(--cv-accent,#0f3d63);border-bottom:2px solid var(--cv-accent,#0f3d63);font-size:1.02em}
+.cv-page.cv-classic.cv-tpl-t29 .cv-c-side .cv-c-text,.cv-page.cv-classic.cv-tpl-t29 .cv-c-side .cv-c-row span:first-child{word-break:break-word}
+@media(max-width:640px){.cv-page.cv-classic.cv-tpl-t29 .cv-c-cols{grid-template-columns:1fr}}
+/* t30 — Bold Modern: heavy name, contact strip, inline underlined headings */
+.cv-page.cv-classic.cv-tpl-t30{--cv-fs:11.5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.43}
+.cv-page.cv-classic.cv-tpl-t30 .cv-c-head{text-align:start;border-bottom:none;padding-bottom:0;margin-bottom:6px}
+.cv-page.cv-classic.cv-tpl-t30 .cv-c-name{font-size:2.75em;font-weight:900;text-transform:none;letter-spacing:-.015em;line-height:1.1;color:#0b0b0b}
+.cv-page.cv-classic.cv-tpl-t30 .cv-c-title{text-transform:none;font-weight:700;color:var(--cv-accent,#b91c1c);letter-spacing:.04em;margin-top:4px}
+.cv-page.cv-classic.cv-tpl-t30 .cv-c-contact{text-align:start;direction:inherit;background:#f3f4f6;border-inline-start:4px solid var(--cv-accent,#b91c1c);padding:5px 10px;margin-top:8px;color:#1f2937;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cv-page.cv-classic.cv-tpl-t30 .cv-c-sec{margin-top:1.1em}
+.cv-page.cv-classic.cv-tpl-t30 .cv-c-h{display:inline-block;border-bottom:3px solid var(--cv-accent,#b91c1c);color:#0b0b0b;font-weight:900;letter-spacing:.1em;padding-bottom:1px;margin-bottom:6px}
+
+.cv-page.cv-classic:is(.cv-tpl-t21,.cv-tpl-t26,.cv-tpl-t29,.cv-tpl-t30) .cv-c-contact:empty{display:none}
+/* ===== v2: contact stack/icons, direct editing bar, grouped template picker ===== */
+.cv-cs-row{display:flex;align-items:flex-start;gap:6px;margin:2px 0;word-break:break-word;line-height:1.4}
+.cv-cs-row svg{width:1.05em;height:1.05em;flex:none;margin-top:.18em;fill:currentColor;opacity:.9}
+.cv-cs-row bdi{unicode-bidi:isolate}
+.cv-page.cv-classic.cv-tpl-t26 .cv-cs-row{justify-content:flex-end}
+.cv-page .cv-contact-line .cv-ct-in{display:block}
+#cv-preview[contenteditable="true"]{outline:2px dashed var(--primary-light);outline-offset:6px;cursor:text;border-radius:4px}
+#cv-preview[contenteditable="true"] .cv-page{caret-color:#2563eb}
+#cv-edit-bar{position:sticky;top:58px;z-index:90;background:var(--card-bg);border:1.5px solid var(--primary-light);border-radius:12px;padding:8px 10px;margin:0 0 12px;box-shadow:var(--shadow-md)}
+#cv-edit-bar .ceb-title{font-size:12px;font-weight:700;color:var(--primary);text-align:center;margin-bottom:6px;line-height:1.6}
+#cv-edit-bar .ceb-btns{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;align-items:center}
+#cv-edit-bar .ceb-sep{width:1px;height:22px;background:var(--border);margin:0 3px}
+#cv-edit-bar button{font-family:"Cairo",sans-serif;font-size:12px;font-weight:700;border:1.5px solid var(--border-light);background:var(--card-bg);color:var(--text);border-radius:8px;padding:5px 10px;cursor:pointer;min-width:34px}
+#cv-edit-bar button:hover{border-color:var(--primary-light);background:var(--primary-pale)}
+#cv-edit-bar button.ceb-on{background:var(--primary);color:#fff;border-color:var(--primary)}
+#cv-edit-status{font-size:11px;text-align:center;margin-top:5px;color:var(--text-muted);min-height:1em}
+.cv-steps{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0 0 10px}
+.cv-steps button{font-family:"Cairo",sans-serif;font-size:11.5px;font-weight:700;border:1.5px solid var(--border-light);background:var(--primary-pale);color:var(--primary);border-radius:20px;padding:5px 12px;cursor:pointer}
+.cv-steps button:hover{background:var(--primary-light);color:#fff}
+#cv-tpl-box{width:100%}
+.cv-tpl-grp{border:1px solid var(--border-light);border-radius:12px;padding:8px 10px;margin:8px 0;background:var(--card-bg)}
+.cv-grp-h{font-size:12.5px;font-weight:800;color:var(--primary-dark);margin-bottom:6px;text-align:center}
+.cv-grp-h small{display:block;font-weight:500;color:var(--text-muted);font-size:10.5px;margin-top:1px}
+[data-theme="dark"] .cv-grp-h{color:var(--text)}
+#cv-style-box{width:100%;margin:10px 0;border:1px solid var(--border);border-radius:10px;padding:8px 12px}
+#cv-style-box>summary{cursor:pointer;font-weight:700;font-size:13px}
+#cv-style-box .cv-font-label{text-align:center}
 /* ===== user controls: color / alignment / spacing / dividers ===== */
 .cv-page.cv-has-accent .cv-name,.cv-page.cv-has-accent .cv-title-line{color:var(--cv-accent)}
 .cv-page.cv-has-accent .cv-section-title{color:var(--cv-accent);border-color:var(--cv-accent)}
@@ -2382,19 +2515,48 @@ code{font-size:10.5px;background:var(--primary-pale);padding:2px 6px;border-radi
   <div id="cv-output" style="display:none">
     <div class="card-title cv-no-print" style="margin-top:6px">✅ السيرة الذاتية جاهزة</div>
     <div class="hl cv-no-print" style="margin-bottom:10px">دي شكلها الحقيقي زي ما هيوصل للشركة</div>
+    <div class="cv-steps cv-no-print">
+      <button type="button" onclick="cvJump('cv-tpl-box')">① اختار القالب</button>
+      <button type="button" onclick="cvJump('cv-style-box')">② ظبّط اللون والخط والأيقونات</button>
+      <button type="button" onclick="cvJump('cv-edit-bar')">③ عدّل في السيرة نفسها</button>
+      <button type="button" onclick="cvJump('cv-pdf-actions')">④ نزّل الملف</button>
+    </div>
+    <div id="cv-edit-bar" class="cv-no-print">
+      <div class="ceb-title">✏️ دوس على أي كلمة جوّا السيرة واكتب أو امسح بإيدك — أو حدّد كلام واستخدم الأزرار</div>
+      <div class="ceb-btns">
+        <button type="button" id="cv-edit-toggle" class="ceb-on" onmousedown="event.preventDefault()" onclick="cvToggleEdit()">✏️ التعديل: شغّال</button>
+        <span class="ceb-sep"></span>
+        <button type="button" title="بولد للمحدد" onmousedown="event.preventDefault()" onclick="cvFmt('bold')"><b>B</b> بولد</button>
+        <button type="button" title="تصغير المحدد" onmousedown="event.preventDefault()" onclick="cvSelSize(-1)">A−</button>
+        <button type="button" title="تكبير المحدد" onmousedown="event.preventDefault()" onclick="cvSelSize(1)">A+</button>
+        <span class="ceb-sep"></span>
+        <button type="button" onmousedown="event.preventDefault()" onclick="cvDelSel()">🗑 امسح المحدد</button>
+        <button type="button" onmousedown="event.preventDefault()" onclick="cvDelClosest('li,.cv-c-text,.cv-c-sub,.cv-summary-text,.cv-proj-title-row,.cv-additional-list>div,.cv-c-row,.cv-edu-row','سطر')">🧹 امسح السطر</button>
+        <button type="button" onmousedown="event.preventDefault()" onclick="cvDelClosest('.cv-c-sec,.cv-section','قسم')">📦 امسح القسم</button>
+        <span class="ceb-sep"></span>
+        <button type="button" onmousedown="event.preventDefault()" onclick="cvUndo()">↩️</button>
+        <button type="button" onmousedown="event.preventDefault()" onclick="cvRedo()">↪️</button>
+        <button type="button" onmousedown="event.preventDefault()" onclick="cvEditReset()">🔄 رجّع الأصل</button>
+      </div>
+      <div id="cv-edit-status"></div>
+    </div>
     <div id="cv-preview-print">
       <div id="cv-preview"></div>
     </div>
     <div class="hl-blue cv-no-print" style="text-align:center;margin-bottom:8px">💡 القوالب اللي عليها ✔ عمود واحد ومناسبة لأنظمة الـATS. اللي عليها ⚠ عمودين (شكلها أحلى للتقديم المباشر بس مش الأفضل للـATS). اختار القالب واللون والخط وأنا ظبطت الباقي.</div>
     <div class="cv-no-print" style="margin:6px 0 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:center">
-      <div class="cv-font-label">🧩 القالب</div>
-      <div class="cv-tpl-row" id="cv-tpl-row" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch active" data-tpl="t11" onclick="cvSelectTemplate('t11',this)" style="width:auto;border-radius:9px;padding:6px 12px">كلاسيك ATS<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t17" onclick="cvSelectTemplate('t17',this)" style="width:auto;border-radius:9px;padding:6px 12px">Software Engineer<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t18" onclick="cvSelectTemplate('t18',this)" style="width:auto;border-radius:9px;padding:6px 12px">Student / Entry-Level<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t19" onclick="cvSelectTemplate('t19',this)" style="width:auto;border-radius:9px;padding:6px 12px">Experienced<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t20" onclick="cvSelectTemplate('t20',this)" style="width:auto;border-radius:9px;padding:6px 12px">Academic / Technical<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t13" onclick="cvSelectTemplate('t13',this)" style="width:auto;border-radius:9px;padding:6px 12px">مينيمال<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t12" onclick="cvSelectTemplate('t12',this)" style="width:auto;border-radius:9px;padding:6px 12px">عصري<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t14" onclick="cvSelectTemplate('t14',this)" style="width:auto;border-radius:9px;padding:6px 12px">تنفيذي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t15" onclick="cvSelectTemplate('t15',this)" style="width:auto;border-radius:9px;padding:6px 12px">مضغوط<small style="color:#15803d"> ✔</small></button></div>
-      <details style="margin:8px 0;text-align:center"><summary style="cursor:pointer;font-size:13px;color:var(--primary);font-weight:700">قوالب إضافية (القديمة + عمودين)</summary>
-      <div class="cv-tpl-row" id="cv-tpl-row2" style="justify-content:center;gap:6px;flex-wrap:wrap;margin-top:8px"><button type="button" class="cv-tpl-swatch" data-tpl="t1" onclick="cvSelectTemplate('t1',this)" style="width:auto;border-radius:9px;padding:6px 12px">أزرق هادئ<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t4" onclick="cvSelectTemplate('t4',this)" style="width:auto;border-radius:9px;padding:6px 12px">داكن بسيط<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t5" onclick="cvSelectTemplate('t5',this)" style="width:auto;border-radius:9px;padding:6px 12px">وسطي بخطوط<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t6" onclick="cvSelectTemplate('t6',this)" style="width:auto;border-radius:9px;padding:6px 12px">شرائط زرقاء<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t7" onclick="cvSelectTemplate('t7',this)" style="width:auto;border-radius:9px;padding:6px 12px">مدمج<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t8" onclick="cvSelectTemplate('t8',this)" style="width:auto;border-radius:9px;padding:6px 12px">سيريف أنيق<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t3" onclick="cvSelectTemplate('t3',this)" style="width:auto;border-radius:9px;padding:6px 12px">روابط + مشاريع<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t10" onclick="cvSelectTemplate('t10',this)" style="width:auto;border-radius:9px;padding:6px 12px">روابط + شيبس<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t16" onclick="cvSelectTemplate('t16',this)" style="width:auto;border-radius:9px;padding:6px 12px">شريط جانبي<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t2" onclick="cvSelectTemplate('t2',this)" style="width:auto;border-radius:9px;padding:6px 12px">عمودين فاتح<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t9" onclick="cvSelectTemplate('t9',this)" style="width:auto;border-radius:9px;padding:6px 12px">عمودين كحلي<small style="color:#b45309"> ⚠</small></button></div></details>
+      <div id="cv-tpl-box">
+      <div class="cv-font-label" style="text-align:center">🧩 القالب — الحالي: <b id="cv-tpl-cur">كلاسيك ATS</b></div>
+      <div class="cv-tpl-grp"><div class="cv-grp-h">✅ رسمي وكلاسيك<small>الأسلم للتقديم على مواقع الشركات (عمود واحد بدون صور)</small></div><div class="cv-tpl-row" id="cv-tpl-row" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch active" data-tpl="t11" onclick="cvSelectTemplate('t11',this)" style="width:auto;border-radius:9px;padding:6px 12px">كلاسيك ATS<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t17" onclick="cvSelectTemplate('t17',this)" style="width:auto;border-radius:9px;padding:6px 12px">Software Engineer<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t18" onclick="cvSelectTemplate('t18',this)" style="width:auto;border-radius:9px;padding:6px 12px">Student / Entry-Level<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t19" onclick="cvSelectTemplate('t19',this)" style="width:auto;border-radius:9px;padding:6px 12px">Experienced<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t20" onclick="cvSelectTemplate('t20',this)" style="width:auto;border-radius:9px;padding:6px 12px">Academic / Technical<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t14" onclick="cvSelectTemplate('t14',this)" style="width:auto;border-radius:9px;padding:6px 12px">تنفيذي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t13" onclick="cvSelectTemplate('t13',this)" style="width:auto;border-radius:9px;padding:6px 12px">مينيمال<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t15" onclick="cvSelectTemplate('t15',this)" style="width:auto;border-radius:9px;padding:6px 12px">مضغوط<small style="color:#15803d"> ✔</small></button></div></div>
+      <div class="cv-tpl-grp"><div class="cv-grp-h">🎨 عصري وملوّن<small>برضه عمود واحد ومناسب للـATS — بس بشكل أحلى</small></div><div class="cv-tpl-row" id="cv-tpl-row2" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch" data-tpl="t12" onclick="cvSelectTemplate('t12',this)" style="width:auto;border-radius:9px;padding:6px 12px">عصري<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t21" onclick="cvSelectTemplate('t21',this)" style="width:auto;border-radius:9px;padding:6px 12px">بلوك كحلي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t22" onclick="cvSelectTemplate('t22',this)" style="width:auto;border-radius:9px;padding:6px 12px">أنيق وسطي<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t23" onclick="cvSelectTemplate('t23',this)" style="width:auto;border-radius:9px;padding:6px 12px">لمسة لون<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t24" onclick="cvSelectTemplate('t24',this)" style="width:auto;border-radius:9px;padding:6px 12px">خط زمني<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t25" onclick="cvSelectTemplate('t25',this)" style="width:auto;border-radius:9px;padding:6px 12px">عناوين مظللة<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t26" onclick="cvSelectTemplate('t26',this)" style="width:auto;border-radius:9px;padding:6px 12px">هيدر مقسوم<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t30" onclick="cvSelectTemplate('t30',this)" style="width:auto;border-radius:9px;padding:6px 12px">عريض عصري<small style="color:#15803d"> ✔</small></button></div></div>
+      <details class="cv-tpl-grp"><summary class="cv-grp-h" style="cursor:pointer">🗂️ قوالب قديمة (8) <small>دوس عشان تفتحها</small></summary><div class="cv-tpl-row" id="cv-tpl-row3" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch" data-tpl="t1" onclick="cvSelectTemplate('t1',this)" style="width:auto;border-radius:9px;padding:6px 12px">أزرق هادئ<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t4" onclick="cvSelectTemplate('t4',this)" style="width:auto;border-radius:9px;padding:6px 12px">داكن بسيط<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t5" onclick="cvSelectTemplate('t5',this)" style="width:auto;border-radius:9px;padding:6px 12px">وسطي بخطوط<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t6" onclick="cvSelectTemplate('t6',this)" style="width:auto;border-radius:9px;padding:6px 12px">شرائط زرقاء<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t7" onclick="cvSelectTemplate('t7',this)" style="width:auto;border-radius:9px;padding:6px 12px">مدمج<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t8" onclick="cvSelectTemplate('t8',this)" style="width:auto;border-radius:9px;padding:6px 12px">سيريف أنيق<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t3" onclick="cvSelectTemplate('t3',this)" style="width:auto;border-radius:9px;padding:6px 12px">روابط + مشاريع<small style="color:#15803d"> ✔</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t10" onclick="cvSelectTemplate('t10',this)" style="width:auto;border-radius:9px;padding:6px 12px">روابط + شيبس<small style="color:#15803d"> ✔</small></button></div></details>
+      <div class="cv-tpl-grp"><div class="cv-grp-h">⚠ عمودين (شريط جانبي / بانر)<small>شكلها أحلى للتقديم المباشر أو الإيميل، مش الأفضل للـATS</small></div><div class="cv-tpl-row" id="cv-tpl-row4" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch" data-tpl="t16" onclick="cvSelectTemplate('t16',this)" style="width:auto;border-radius:9px;padding:6px 12px">شريط جانبي<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t2" onclick="cvSelectTemplate('t2',this)" style="width:auto;border-radius:9px;padding:6px 12px">عمودين فاتح<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t9" onclick="cvSelectTemplate('t9',this)" style="width:auto;border-radius:9px;padding:6px 12px">عمودين كحلي<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t27" onclick="cvSelectTemplate('t27',this)" style="width:auto;border-radius:9px;padding:6px 12px">شريط جانبي فاتح<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t28" onclick="cvSelectTemplate('t28',this)" style="width:auto;border-radius:9px;padding:6px 12px">شريط جانبي داكن<small style="color:#b45309"> ⚠</small></button><button type="button" class="cv-tpl-swatch" data-tpl="t29" onclick="cvSelectTemplate('t29',this)" style="width:auto;border-radius:9px;padding:6px 12px">بانر + عمودين<small style="color:#b45309"> ⚠</small></button></div></div>
+      </div>
       <div class="cv-hint" style="text-align:center">✔ = عمود واحد بدون صور أو جداول (مناسب لأنظمة الـATS) &nbsp;|&nbsp; ⚠ = عمودين، شكله أحلى للتقديم المباشر بس مش الأفضل للـATS</div>
       <details style="margin:10px 0;border:1px solid var(--border);border-radius:10px;padding:8px 12px"><summary style="cursor:pointer;font-weight:700;font-size:13px">🧱 ترتيب الأقسام وإظهارها / إخفائها</summary>
         <div id="cv-sec-note" class="cv-hint"></div><div id="cv-sec-list"></div>
         <button type="button" class="cv-mini-btn" onclick="cvResetSecOrder()" style="margin-top:6px">↩️ رجّع الترتيب الافتراضي للقالب</button></details>
+      <details open id="cv-style-box"><summary>🎛️ تنسيق الشكل: خط • لون • مسافات • أيقونات • حجم الخط كله</summary>
       <div class="cv-font-label">🔤 الخط</div>
       <div class="cv-tpl-row" id="cv-font-row" style="justify-content:center;gap:6px;flex-wrap:wrap">
         <button type="button" class="cv-tpl-swatch active" data-font="auto" onclick="cvSelectFont('auto',this)" style="width:auto;border-radius:9px;padding:6px 11px">الافتراضي (Arial)</button>
@@ -2419,12 +2581,14 @@ code{font-size:10.5px;background:var(--primary-pale);padding:2px 6px;border-radi
       <div class="cv-tpl-row" id="cv-div-row" style="justify-content:center;gap:6px;flex-wrap:wrap"><button type="button" class="cv-tpl-swatch active" data-v="auto" onclick="cvSetOpt('Div','auto',this)" style="width:auto;border-radius:9px;padding:6px 12px">حسب القالب</button><button type="button" class="cv-tpl-swatch" data-v="off" onclick="cvSetOpt('Div','off',this)" style="width:auto;border-radius:9px;padding:6px 12px">بدون خطوط</button></div>
       <div class="cv-font-label">🖼️ اللوجوهات (اختياري)</div>
       <div class="cv-tpl-row" style="justify-content:center"><button type="button" class="cv-tpl-swatch" onclick="cvToggleIcons(this)" style="width:auto;border-radius:9px;padding:6px 14px">➕ أيقونات التواصل (لوجوهات)</button></div>
+      <div class="cv-hint" style="text-align:center">شغّالة على كل القوالب، وبترتّب بيانات التواصل بالترتيب: موبايل ← إيميل ← مدينة ← روابط</div>
       <div class="cv-font-label">📏 حجم الخط</div>
       <div class="cv-tpl-row" style="justify-content:center;gap:6px">
         <button type="button" class="cv-tpl-swatch" onclick="cvSizeStep(-1)" style="width:auto;border-radius:9px;padding:6px 14px">A−</button>
         <button type="button" class="cv-tpl-swatch" onclick="cvSizeStep(0)" style="width:auto;border-radius:9px;padding:6px 14px" id="cv-size-label">الحجم الأصلي</button>
         <button type="button" class="cv-tpl-swatch" onclick="cvSizeStep(1)" style="width:auto;border-radius:9px;padding:6px 14px">A+</button>
       </div>
+      </details>
     </div>
     <div class="cv-no-print" id="cv-check-wrap" style="margin:12px 0;padding:10px 12px;border:1px solid var(--border);border-radius:12px">
       <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
@@ -2441,7 +2605,7 @@ code{font-size:10.5px;background:var(--primary-pale);padding:2px 6px;border-radi
       <pre id="cv-ats-text" style="display:none;white-space:pre-wrap;font-size:12px;background:rgba(0,0,0,.04);padding:10px;border-radius:8px;margin-top:8px;max-height:320px;overflow:auto"></pre>
     </div>
     <div id="cv-top-alert" class="cv-no-print" style="display:none;margin:12px 0"></div>
-    <div class="cv-actions-row cv-no-print">
+    <div class="cv-actions-row cv-no-print" id="cv-pdf-actions">
       <button class="cv-generate-btn" id="cv-print-btn" style="width:auto;padding:11px 22px;margin-top:0" onclick="cvPrintPDF(this)">📄 PDF نصي (مناسب للـATS)</button>
       <button class="cv-generate-btn" id="cv-docx-btn" style="width:auto;padding:11px 22px;margin-top:0" onclick="cvDownloadDOCX(this)">📝 Word قابل للتعديل (DOCX)</button>
       <button class="cv-generate-btn" id="cv-pdf-btn" style="width:auto;padding:11px 22px;margin-top:0;opacity:.85" onclick="cvDownloadPDF()">🖼️ PDF صورة (للمشاركة بس — مش للـATS)</button>
@@ -5414,7 +5578,7 @@ function showLaptopTrack(id, btn) {
   <div class="card-title"><span class="ci">📘</span> صفحات فيسبوك مهمة للتعليم</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
     <a href="https://www.facebook.com/share/1G4eQYxc2g/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🌐</span><span class="ql-text">عبدالرحمن محمد — Web</span></a>
-    <a href="https://www.facebook.com/share/1PDzYi8MjT/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🌐</span><span class="ql-text">الزيرو — Web</span></a>
+      <a href="https://www.facebook.com/share/1PDzYi8MjT/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🌐</span><span class="ql-text">الزيرو — Web</span></a>
     <a href="https://www.facebook.com/share/1ErJzSxY9n/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🔐</span><span class="ql-text">محمد السيد — backend</span></a>
     <a href="https://www.facebook.com/share/1CWQN1NDbS/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🔐</span><span class="ql-text">إبراهيم حجازي — Cyber</span></a>
     <a href="https://www.facebook.com/groups/programmingadvices/" target="_blank" rel="noopener noreferrer" class="quick-link"><span class="ql-icon">🦆</span><span class="ql-text">أبو هدهود — جروب</span></a>
@@ -10781,8 +10945,8 @@ let cvColor='#000000';
 let cvColorSet=false,cvAlign='auto',cvSpace='auto',cvDiv='auto';
 let cvSizeDelta=0;
 const CV_FONT_STACKS={arial:"Arial,'Arimo',Helvetica,sans-serif",times:"'Times New Roman','Tinos',Times,serif",calibri:"Calibri,'Carlito',Candara,Arial,sans-serif",georgia:"Georgia,'Times New Roman',serif",garamond:"Garamond,'EB Garamond',Georgia,serif",cambria:"Cambria,'Caladea',Georgia,serif",cairo:"'Cairo',Tahoma,Arial,sans-serif"};
-const CV_BASE_FS={t11:11.5,t12:11.5,t13:11.5,t14:11.5,t15:10.5,t16:11,t17:11,t18:11.5,t19:11.5,t20:12};
-const CV_TEMPLATES={t11:'كلاسيك ATS',t12:'عصري',t13:'مينيمال',t14:'تنفيذي',t15:'مضغوط',t16:'شريط جانبي',t17:'Software Engineer',t18:'Student / Entry-Level',t19:'Experienced',t20:'Academic / Technical',t1:'أزرق هادئ',t2:'عمودين فاتح',t3:'روابط + مشاريع',t4:'داكن بسيط',t5:'وسطي بخطوط',t6:'شرائط زرقاء',t7:'مدمج',t8:'سيريف أنيق',t9:'عمودين كحلي',t10:'روابط + شيبس'};
+const CV_BASE_FS={t11:11.5,t12:11.5,t13:11.5,t14:11.5,t15:10.5,t16:11,t17:11,t18:11.5,t19:11.5,t20:12,t21:11.5,t22:11.5,t23:11.5,t24:11.5,t25:11.5,t26:11.5,t27:11,t28:11,t29:11,t30:11.5};
+const CV_TEMPLATES={t11:'كلاسيك ATS',t12:'عصري',t13:'مينيمال',t14:'تنفيذي',t15:'مضغوط',t16:'شريط جانبي',t17:'Software Engineer',t18:'Student / Entry-Level',t19:'Experienced',t20:'Academic / Technical',t1:'أزرق هادئ',t2:'عمودين فاتح',t3:'روابط + مشاريع',t4:'داكن بسيط',t5:'وسطي بخطوط',t6:'شرائط زرقاء',t7:'مدمج',t8:'سيريف أنيق',t9:'عمودين كحلي',t10:'روابط + شيبس',t21:'بلوك كحلي',t22:'أنيق وسطي',t23:'لمسة لون',t24:'خط زمني',t25:'عناوين مظللة',t26:'هيدر مقسوم',t30:'عريض عصري',t27:'شريط جانبي فاتح',t28:'شريط جانبي داكن',t29:'بانر + عمودين'};
 let cvLastData=null;
 let cvPhotoDataUrl='';
 
@@ -10804,6 +10968,11 @@ function cvContactHTML(d){
   const l1=d.contactItems.filter(i=>['location','phone','email'].includes(i.t)).map(ic).join('');
   const l2=d.contactItems.filter(i=>!['location','phone','email'].includes(i.t)).map(ic).join('');
   return (l1?line(l1):'')+(l2?line(l2):'');
+}
+function cvContactStack(d){
+  const useIc=cvIcons&&d.contactItems&&d.contactItems.length;
+  const rows=useIc?d.contactItems:d.contactParts.map(v=>({t:'',v}));
+  return rows.map(it=>`<div class="cv-cs-row">${useIc&&it.t&&CV_ICONS[it.t]?`<svg viewBox="0 0 24 24" aria-hidden="true">${CV_ICONS[it.t]}</svg>`:''}<span><bdi>${cvLinkifyPart(it.v)}</bdi></span></div>`).join('');
 }
 function cvToggleIcons(btn){
   cvIcons=!cvIcons;
@@ -11107,7 +11276,7 @@ function cvBuildT1(d,tpl){
   tpl=tpl||'t1';
   const L=d.L;
   const photoHtml=d.photo?`<img class="cv-photo-circle" src="${d.photo}" alt="">`:'';
-  const contactHtml=d.contactParts.map(cvEsc).join('<br>');
+  const contactHtml=cvContactHTML(d);
   const summaryBlock=d.summary?`<div class="cv-section"><div class="cv-section-title">${L.summary}</div><div class="cv-summary-text">${cvEsc(d.summary)}</div></div>`:'';
   const expBlock=d.projects.length?`<div class="cv-section"><div class="cv-section-title">${L.experience}</div>${cvProjItemsHTML(d)}</div>`:'';
   const addLines=[];
@@ -11137,7 +11306,7 @@ function cvBuildT2(d,tpl){
   tpl=tpl||'t2';
   const L=d.L;
   const eduSub=`${cvEsc(d.trackName)}${d.gpa?' — GPA: '+cvEsc(d.gpa):''}`;
-  const sideContact=d.contactParts.map(cvEsc).join('<br>');
+  const sideContact=cvContactStack(d);
   const certsHtml=d.certsArr.length?`<div class="cv-section"><div class="cv-section-title">${L.certs}</div><div class="cv-additional-list">${d.certsArr.map(cvCertLine).join('<br>')}</div></div>`:'';
   const skillsHtml=d.skillsArr.length?`<div class="cv-section"><div class="cv-section-title">${L.skills}</div><div class="cv-additional-list">${d.skillsArr.map(cvEsc).join('<br>')}</div></div>`:'';
   const expBlock=d.projects.length?`<div class="cv-section"><div class="cv-section-title">${L.experience}</div>${cvProjItemsHTML(d)}</div>`:'';
@@ -11174,7 +11343,7 @@ function cvBuildT3(d,tpl){
   if(d.email)links.push('Email: '+d.email);
   if(d.phone)links.push('Phone: '+d.phone);
   if(d.location)links.push('City: '+d.location);
-  const linkRow=links.map(cvEsc).join(' &nbsp;|&nbsp; ');
+  const linkRow=cvIcons?cvContactHTML(d):links.map(cvEsc).join(' &nbsp;|&nbsp; ');
   const summaryBlock=d.summary?`<div class="cv-section"><div class="cv-section-title">${L.summary}</div><div class="cv-summary-text">${cvEsc(d.summary)}</div></div>`:'';
   const projItems=d.projects.map(p=>`
     <div class="cv-proj-item">
@@ -11253,7 +11422,64 @@ function cvRenderSecPanel(){
       <button type="button" class="cv-mini-btn" ${i===0?'disabled':''} onclick="cvMoveSec('${k}',-1)" aria-label="فوق">▲</button>
       <button type="button" class="cv-mini-btn" ${i===ord.length-1?'disabled':''} onclick="cvMoveSec('${k}',1)" aria-label="تحت">▼</button></div>`;}).join('');
 }
-function cvRefreshPreview(){ if(cvLastData){document.getElementById('cv-preview').innerHTML=cvBuildHTML(cvLastData,cvTemplate);cvRenderSecPanel();} }
+function cvRefreshPreview(){ if(cvLastData){document.getElementById('cv-preview').innerHTML=cvBuildHTML(cvLastData,cvTemplate);cvRenderSecPanel();try{cvTplLabel();}catch(e){}} }
+/* ===================== Direct editing on the CV preview ===================== */
+function cvPrev(){return document.getElementById('cv-preview');}
+function cvEditNotice(dropped){
+  const s=document.getElementById('cv-edit-status');if(!s)return;
+  if(dropped){s.textContent='↩️ التعديلات اليدوية اتلغت لأنك غيّرت القالب/التنسيق — غيّر الأول وبعدين عدّل بإيدك.';s.style.color='#b45309';return;}
+  s.style.color='';s.textContent=cvManual?'✏️ فيه تعديلات يدوية على السيرة (داخلة في الـPDF والطباعة، مش في ملف Word).':'';
+}
+function cvEditSync(){const p=cvPrev();if(!p||!cvLastData)return;cvManual={base:cvLastBase,edited:p.innerHTML};cvEditNotice();}
+function cvEditInit(){
+  const p=cvPrev();if(!p)return;
+  if(!p.dataset.editWired){
+    p.dataset.editWired='1';
+    p.addEventListener('input',cvEditSync);
+    p.addEventListener('paste',e=>{e.preventDefault();const t=(e.clipboardData||window.clipboardData).getData('text/plain');document.execCommand('insertText',false,t);});
+    p.addEventListener('drop',e=>e.preventDefault());
+  }
+  p.setAttribute('contenteditable','true');p.setAttribute('spellcheck','false');
+  const b=document.getElementById('cv-edit-toggle');if(b){b.classList.add('ceb-on');b.textContent='✏️ التعديل: شغّال';}
+  cvTplLabel();
+}
+function cvToggleEdit(){
+  const p=cvPrev();const on=p.getAttribute('contenteditable')==='true';
+  p.setAttribute('contenteditable',on?'false':'true');
+  const b=document.getElementById('cv-edit-toggle');if(b){b.classList.toggle('ceb-on',!on);b.textContent=on?'🔒 التعديل: مقفول':'✏️ التعديل: شغّال';}
+}
+function cvEditHint(m){const s=document.getElementById('cv-edit-status');if(s){s.style.color='#b45309';s.textContent=m;setTimeout(()=>cvEditNotice(),2500);}}
+function cvSelInside(){const s=window.getSelection(),p=cvPrev();return s&&s.rangeCount&&p&&p.contains(s.anchorNode)?s:null;}
+function cvFmt(cmd){
+  if(!cvSelInside()||window.getSelection().isCollapsed){cvEditHint('حدّد الكلمة أو الجملة الأول.');return;}
+  document.execCommand('styleWithCSS',false,false);document.execCommand(cmd);cvEditSync();
+}
+function cvSelSize(dir){
+  const s=cvSelInside();if(!s||s.isCollapsed){cvEditHint('حدّد الكلمة أو الجملة الأول.');return;}
+  document.execCommand('styleWithCSS',false,false);document.execCommand('fontSize',false,'7');
+  cvPrev().querySelectorAll('font[size="7"]').forEach(f=>{
+    const par=f.parentElement||cvPrev();const base=parseFloat(getComputedStyle(par).fontSize)||12;
+    const sp=document.createElement('span');sp.style.fontSize=Math.max(7,Math.min(40,base*(dir>0?1.15:0.87))).toFixed(1)+'px';
+    while(f.firstChild)sp.appendChild(f.firstChild);f.replaceWith(sp);
+  });
+  cvEditSync();
+}
+function cvDelSel(){
+  const s=cvSelInside();if(!s||s.isCollapsed){cvEditHint('حدّد الكلام اللي عايز تمسحه الأول (أو دوس عليه واستخدم Backspace).');return;}
+  document.execCommand('delete');cvEditSync();
+}
+function cvDelClosest(sel,what){
+  const s=cvSelInside();if(!s){cvEditHint('دوس جوّا السيرة على ال'+what+' اللي عايز تمسحه الأول.');return;}
+  let n=s.anchorNode;n=n.nodeType===1?n:n.parentElement;
+  const el=n&&n.closest(sel);if(!el||!cvPrev().contains(el)||el.classList.contains('cv-page')){cvEditHint('مقدرتش أحدد ال'+what+' هنا — حدّد الكلام ودوس "امسح المحدد".');return;}
+  el.remove();cvEditSync();
+}
+function cvUndo(){document.execCommand('undo');cvEditSync();}
+function cvRedo(){document.execCommand('redo');cvEditSync();}
+function cvEditReset(){cvManual=null;cvRefreshPreview();cvEditNotice();const s=document.getElementById('cv-edit-status');if(s){s.style.color='';s.textContent='🔄 رجعت السيرة زي ما اتولّدت من بياناتك.';}}
+function cvTplLabel(){const e=document.getElementById('cv-tpl-cur');if(e)e.textContent=CV_TEMPLATES[cvTemplate]||'';}
+function cvJump(id){const e=document.getElementById(id);if(e){if(e.tagName==='DETAILS')e.open=true;e.scrollIntoView({behavior:'smooth',block:'start'});}}
+
 function cvToggleSec(k,on){ if(on)delete cvSecHidden[k]; else cvSecHidden[k]=true; cvRefreshPreview(); if(typeof cvSaveDraft==='function')cvSaveDraft(); }
 function cvMoveSec(k,dir){
   const ord=cvOrderFor(cvTemplate,true),i=ord.indexOf(k),j=i+dir; if(i<0||j<0||j>=ord.length)return;
@@ -11317,7 +11543,7 @@ function cvRestoreDraft(){
   cvTemplate=CV_TEMPLATES[o.tpl]?o.tpl:'t11';cvFont=o.font||'auto';cvColor=o.color||'#000000';cvColorSet=o.colorSet!==undefined?!!o.colorSet:(!!o.color&&o.color!=='#000000');cvAlign=o.align||'auto';cvSpace=o.space||'auto';cvDiv=o.dv||'auto';try{cvSyncCtlUI();}catch(e){}cvSizeDelta=o.size||0;cvSecOrder=o.order||null;cvSecHidden=o.hidden||{};
   try{cvTrackChanged();}catch(e){}
   cvRenderProjectInputs();
-  document.querySelectorAll('#cv-tpl-row .cv-tpl-swatch,#cv-tpl-row2 .cv-tpl-swatch').forEach(b=>b.classList.toggle('active',b.dataset.tpl===cvTemplate));
+  document.querySelectorAll('#cv-tpl-box .cv-tpl-swatch[data-tpl]').forEach(b=>b.classList.toggle('active',b.dataset.tpl===cvTemplate));
   const ban=document.getElementById('cv-draft-banner');if(ban)ban.style.display='none';
 }
 function cvDiscardDraft(){try{localStorage.removeItem(CV_DRAFT_KEY);}catch(e){}const ban=document.getElementById('cv-draft-banner');if(ban)ban.style.display='none';}
@@ -11511,7 +11737,7 @@ function cvValidate(d){
   const mixed=d.projects.filter(p=>p.bullets.some(b=>{const x=cvScriptOf(b);return x&&x!==d.lang;}));
   if(mixed.length)add(W,'بعض أوصاف المشاريع بلغة مختلفة عن لغة السيرة.','استخدم زرار "ترجمة المحتوى" أو اكتبها بلغة موحّدة.');
   // --- أغلاط شائعة بتضر بالـATS (من كارت نصائح الـATS)
-  if(['t2','t9','t16'].includes(cvTemplate))add(W,'القالب المختار عمودين — بعض أنظمة الـATS بتخلط ترتيب الكلام في الأعمدة.','اختار قالب عليه ✔ (زي "كلاسيك ATS") لو هتقدّم عن طريق موقع الشركة.');
+  if(['t2','t9','t16','t27','t28','t29'].includes(cvTemplate))add(W,'القالب المختار عمودين — بعض أنظمة الـATS بتخلط ترتيب الكلام في الأعمدة.','اختار قالب عليه ✔ (زي "كلاسيك ATS") لو هتقدّم عن طريق موقع الشركة.');
   if(cvIcons)add(W,'أيقونات التواصل شغالة — بعض الأنظمة بتتجاهل الأيقونات أو بتقراها رموز غريبة.','اقفل "أيقونات التواصل" واستخدم نص عادي (Email: ... | Phone: ...).');
   const rated=d.skillsArr.filter(s=>/(\d{2,3}\s*%|[★☆●○]{2,}|\b\d\s*\/\s*(5|10)\b|\((beginner|intermediate|advanced|expert)\)|[-–:]\s*(beginner|intermediate|advanced|expert)\b)/i.test(s));
   if(rated.length)add(W,'مهاراتك فيها تقييم (نسب أو نجوم أو مستوى) زي: "'+String(rated[0]).slice(0,40)+'".','اكتب اسم المهارة بس من غير نسبة أو نجوم — التقييم الذاتي مش بيفيد الـATS وبيدّي انطباع ضعيف.');
@@ -11640,7 +11866,7 @@ function cvSafeName(d){return (d.name||'CV').replace(/[^\p{L}\p{N}]+/gu,'_').rep
 function cvPrintHTML(){
   const d=cvLastData||cvCollectData();
   const css=[...document.querySelectorAll('style')].map(x=>x.textContent).join('\n');
-  const bleed=/^t(16|9|2)$/.test(cvTemplate);
+  const bleed=/^t(16|9|2|27|28|29)$/.test(cvTemplate);
   const extra=bleed?'@page{size:A4;margin:0}':'@page{size:A4;margin:12mm 14mm}.cv-page{padding:0 !important;min-height:0 !important}';
   return '<!doctype html><html lang="'+d.lang+'" dir="'+(d.lang==='ar'?'rtl':'ltr')+'"><head><meta charset="utf-8"><title>'+cvEsc(cvSafeName(d))+'_CV</title><style>'+css+'</style><style>'+extra+'html,body{margin:0 !important;padding:0 !important;background:#fff !important;display:block !important}body *{visibility:visible !important}.cv-page{box-shadow:none !important;margin:0 !important;max-width:none !important;width:auto !important;border:0 !important}.cv-c-h{break-after:avoid;page-break-after:avoid}.cv-c-item{break-inside:avoid;page-break-inside:avoid}li{break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}</style></head><body><div id="pdf-print-area">'+cvBuildHTML(d,cvTemplate)+'</div></body></html>';
 }
@@ -11744,7 +11970,7 @@ function cvDownloadDOCX(btn){
     const blob=new Blob([bytes],{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
     const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=cvSafeName(cvLastData)+'_CV.docx';document.body.appendChild(a);a.click();
     setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);
-    if(st){st.style.display='block';st.textContent='✅ اتنزّل ملف Word قابل للتعديل (نص حقيقي، بدون جداول أو صور).';}
+    if(st){st.style.display='block';st.textContent='✅ اتنزّل ملف Word قابل للتعديل (نص حقيقي، بدون جداول أو صور).'+(cvManual?' ⚠️ تعديلاتك اليدوية على المعاينة مش داخلة في ملف Word (بيتبني من البيانات) — عدّل فيه مباشرة.':'');}
   }catch(e){if(st){st.style.display='block';st.textContent='⚠️ حصلت مشكلة وقت إنشاء ملف Word. بياناتك سليمة — جرّب تاني أو استخدم PDF النصي.';}}
 }
 
@@ -11756,7 +11982,7 @@ window.addEventListener('beforeprint',()=>{
   if(!out||out.style.display==='none'||!cvLastData)return;
   let host=document.getElementById('pdf-print-area');
   if(host&&host.children.length)return;                 // another feature (e.g. GPA report) is already using it
-  const bleed=/^t(16|9|2)$/.test(cvTemplate);
+  const bleed=/^t(16|9|2|27|28|29)$/.test(cvTemplate);
   const st=document.createElement('style');st.id='cv-bp-style';
   st.textContent=(bleed?'@page{size:A4;margin:0}':'@page{size:A4;margin:12mm 14mm}.cv-page{padding:0 !important;min-height:0 !important}')+'#pdf-print-area,#pdf-print-area *{visibility:visible !important}#pdf-print-area .cv-page{box-shadow:none !important;margin:0 !important;max-width:none !important;width:auto !important;border:0 !important}#pdf-print-area .cv-c-h{break-after:avoid}#pdf-print-area .cv-c-item,#pdf-print-area li{break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}';
   document.head.appendChild(st);
@@ -11837,20 +12063,28 @@ function cvBuildClassic(d,tpl){
   const SEC={summary,experience:exp,projects:projs,education:edu,skills,certs,courses,training,awards,publications:pubs,volunteer,languages:langs,additional:add};
   const ORD=cvOrderFor(tpl);
   const part=keys=>ORD.filter(k=>keys.includes(k)).map(k=>SEC[k]).join('');
-  if(tpl==='t16'){
-    const contactSide=sec(L.contact,`<div class="cv-c-text">${d.contactParts.map(x=>'<bdi>'+cvLinkifyPart(x)+'</bdi>').join('<br>')}</div>`);
-    return `<div class="cv-page cv-classic cv-tpl-t16" dir="${d.lang==='ar'?'rtl':'ltr'}">
+  if(tpl==='t16'||tpl==='t27'||tpl==='t28'){
+    const contactSide=sec(L.contact,`<div class="cv-c-text">${cvContactStack(d)}</div>`);
+    return `<div class="cv-page cv-classic cv-tpl-${tpl}" dir="${d.lang==='ar'?'rtl':'ltr'}">
     <div class="cv-c-side">${contactSide}${part(['skills','certs','courses','languages'])}</div>
     <div class="cv-c-main">
       <div class="cv-c-head"><div class="cv-c-name">${cvEsc(d.name)}</div>${d.title?`<div class="cv-c-title">${cvEsc(d.title)}</div>`:''}</div>
       ${part(['summary','experience','projects','education','training','awards','publications','volunteer','additional'])}
     </div></div>`;
   }
+  if(tpl==='t29'){
+    return `<div class="cv-page cv-classic cv-tpl-t29" dir="${d.lang==='ar'?'rtl':'ltr'}">
+    <div class="cv-c-head"><div class="cv-c-name">${cvEsc(d.name)}</div>${d.title?`<div class="cv-c-title">${cvEsc(d.title)}</div>`:''}<div class="cv-c-contact">${cvContactHTML(d)}</div></div>
+    <div class="cv-c-cols">
+      <div class="cv-c-main">${part(['summary','experience','projects','education','training','awards','publications','volunteer','additional'])}</div>
+      <div class="cv-c-side">${part(['skills','certs','courses','languages'])}</div>
+    </div></div>`;
+  }
   return `<div class="cv-page cv-classic cv-tpl-${tpl}" dir="${d.lang==='ar'?'rtl':'ltr'}">
     <div class="cv-c-head">
       <div class="cv-c-name">${cvEsc(d.name)}</div>
       ${d.title?`<div class="cv-c-title">${cvEsc(d.title)}</div>`:''}
-      <div class="cv-c-contact">${cvContactHTML(d)}</div>
+      <div class="cv-c-contact">${tpl==='t26'?cvContactStack(d):cvContactHTML(d)}</div>
     </div>
     ${part(CV_SEC_KEYS)}
   </div>`;
@@ -11868,9 +12102,15 @@ function cvApplyStyle(html,tpl){
   if(!st.length&&!at&&!cls)return html;
   return html.replace('<div class="cv-page ','<div'+(st.length?' style="'+st.join(';')+'"':'')+at+' class="cv-page '+cls);
 }
+let cvManual=null,cvLastBase='';
 function cvBuildHTML(d,tpl){
   tpl=CV_TEMPLATES[tpl]?tpl:'t11';
-  return cvApplyStyle(cvBuildHTMLRaw(d,tpl),tpl);
+  const html=cvApplyStyle(cvBuildHTMLRaw(d,tpl),tpl);
+  if(cvManual){
+    if(cvManual.base===html){cvLastBase=html;return cvManual.edited;}   // nothing else changed: keep the user's hand edits
+    cvManual=null;cvEditNotice(true);                                     // template/style/data changed: rebuild from scratch
+  }
+  cvLastBase=html;return html;
 }
 function cvBuildHTMLRaw(d,tpl){
   if(tpl==='t2'||tpl==='t9')return cvBuildT2(d,tpl);
@@ -11881,7 +12121,7 @@ function cvBuildHTMLRaw(d,tpl){
 function cvSelectTemplate(key,btn){
   if(!CV_TEMPLATES[key])return;
   cvTemplate=key; cvSecOrder=null;
-  document.querySelectorAll('#cv-tpl-row .cv-tpl-swatch,#cv-tpl-row2 .cv-tpl-swatch').forEach(b=>b.classList.toggle('active',b.dataset.tpl===key));
+  document.querySelectorAll('#cv-tpl-box .cv-tpl-swatch[data-tpl]').forEach(b=>b.classList.toggle('active',b.dataset.tpl===key));
   cvRefreshPreview(); if(typeof cvSaveDraft==='function')cvSaveDraft();
 }
 
@@ -11924,6 +12164,7 @@ function cvGenerate(){
   document.getElementById('cv-form-wrap').style.display='none';
   cvRenderSecPanel();
   try{cvRunCheck(true);}catch(e){}
+  try{cvEditInit();}catch(e){}
   document.getElementById('cv-output').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
